@@ -2,18 +2,14 @@
 
 import { inject } from 'aurelia-dependency-injection';
 // import $ from 'jquery';
-import { ApiService } from '../../../utils/servicesApi';
-import { ApplicationService } from '../../../services/application-service';
+import { ApiService } from '../../utils/servicesApi';
+import { ApplicationService } from '../../services/application-service';
 import moment from 'moment';
-import { DialogService } from 'aurelia-dialog';
-// import { Prompt } from '../../../services/prompt';
-import { Promptyn } from '../../../services/promptyn';
 
-// import jsRapTable from 'jsRapTable';
-import jsRapTable from '../../../jslib/jsRapTable';
+// import jsRapTable from '../../../jslib/jsRapTable';
 
 
-@inject(ApiService, ApplicationService, DialogService)
+@inject(ApiService, ApplicationService)
 export class Adjustermotes {
 
  
@@ -28,7 +24,7 @@ export class Adjustermotes {
   newNoteWorkDate = '';
   newNote = '';
 
-  constructor(api, appService, dialogService) {
+  constructor(api, appService) {
     this.api = api;
     this.appService = appService;
     this.inv = '';
@@ -39,7 +35,7 @@ export class Adjustermotes {
     // this.inputable='disabled'
     this.isDisableEdit = true
     this.currentnote = '';
-    this.dialogService = dialogService
+    // this.dialogService = dialogService
    
 
   }
@@ -101,23 +97,7 @@ export class Adjustermotes {
 
   }
   remove(item, index) {
-    // alert('you are about to delete ' + item.Notes + ' ' + index)
-    // this.mode = 0
-
-    // let notes = this.currentItem.notes
-    // notes.splice(index, 1)// start, deleteCount)
-    // this.dialogService.open({ viewModel: Prompt, model: 'Delete or Cancel?', lock: false }).whenClosed(response => {
-    this.dialogService.open({ viewModel: Promptyn, model: 'Delete or Cancel?', lock: true }).whenClosed(response => {
-
-      if (!response.wasCancelled) {
-        console.log('Delete')
-        let notes = this.currentItem.notes
-        notes.splice(index, 1)// start, deleteCount)
-      } else {
-        console.log('cancel');
-      }
-      console.log(response.output);
-    });
+    
   }
 
 
