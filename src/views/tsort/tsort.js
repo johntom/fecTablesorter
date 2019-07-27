@@ -9,6 +9,11 @@ import { DialogService } from 'aurelia-dialog';
 // import { Prompt } from '../../../services/prompt';
 import { Promptyn } from '../../services/promptyn';
 
+// with kendo version must load tablesorter here
+import tablesorter from  '../../../jslib/jquery.tablesorter.min';
+import tablesorterw from '../../../jslib/jquery.tablesorter.widgets';
+import tablesorters from '../../../jslib/widget-scroller';
+
 
 @inject(ApiService, ApplicationService, DialogService)
 export class Inventory{

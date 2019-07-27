@@ -1,0 +1,128 @@
+<template>
+	<require from="../../../resources/value-converters/date-format"></require>
+
+	<style>
+		.RLeft {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin: 0 0 1em 0;
+			padding: 0;
+			width: 70%;
+		}
+	</style>
+<!-- PurchasedFrom: "5d273ea0fe0cb61411752d92" purchasedfromname
+PurchasedNotes: "Jay Barrows as agent for Sidney and Frances Lewis . Beda Jedlicka wired USD to The F/S Co., Inc."
+PurchasedPayment: 609 -->
+	<div class="flex-row-none">
+		<div class="RLeft">
+
+			<div class="form-group flex-column-1 ">
+				<div class="Rtable Rtable--2cols">
+					<div class="Rtable-cell-30 Rtable-cell--highlight" style="color:purple">
+						<strong>Purchased From </strong>
+					</div>
+					<div class="Rtable-cell-70 Rtable-cell--highlight">
+            	<div class="Rtable-cell-70  Rtable-cell--light">
+
+  	<div if.bind="currentItem.purchasedfromname===undefined || currentItem.purchasedfromname===''">
+							<a click.delegate="showModal( 'PurchasedFrom')">select_link </a>
+						</div>
+						<div else>
+							<a click.delegate="showModal('PurchasedFrom')">${currentItem.purchasedfromname}</a>
+
+						</div>
+  
+  	</div>
+    	</div>
+						<!-- <select id="PurchasedFrom " class="form-control  " value.bind="currentItem.PurchasedFrom">
+											<option model.bind="null">Choose...</option>
+											<option repeat.for="opt of appService.codesOwnership " model.bind="opt.id">
+												${opt.Description}
+											</option>
+										</select> -->
+				
+	<div class="Rtable-cell-30 Rtable-cell--highlight">
+						<strong> PurchasedFrom</strong>
+					</div>
+					<div class="Rtable-cell-70  Rtable-cell--highlight">
+						<input type="text" id="PurchasedFrom" class="form-control input-sm" value.bind="currentItem.PurchasedFrom">
+					</div>
+					<div class="Rtable-cell-30 Rtable-cell--highlight" style="color:purple">
+						<strong>Purchased Payment : ${currentItem.PurchasedPayment}</strong>
+					</div>
+					<div class="Rtable-cell-70 Rtable-cell--highlight">
+<select id="PurchasedPayment " class="form-control  " value.bind="currentItem.PurchasedPayment">
+											<option model.bind="null">Choose...</option>
+											<option repeat.for="opt of appService.codesOwnership " model.bind="opt.id">
+												${opt.Description}
+											</option>
+										</select>
+				
+					</div>
+
+
+
+
+					<div class="Rtable-cell-30 Rtable-cell--highlight">
+						<strong> Price</strong>
+					</div>
+					<div class="Rtable-cell-70  Rtable-cell--highlight">
+						<input type="text" id="PurchasedPrice" class="form-control input-sm" value.bind="currentItem.PurchasedPrice">
+					</div>
+					<div class="Rtable-cell-30 Rtable-cell--highlight">
+						<strong> Date</strong>
+					</div>
+					<div class="Rtable-cell-70  Rtable-cell--highlight">
+						<input type="date" id="PurchasedDate" class="form-control input-sm" value.bind="currentItem.PurchasedDate | dateFormat">
+					</div>
+
+
+					<!-- <div class="Rtable-cell-30 Rtable-cell--highlight">
+						<strong> Payment</strong>
+					</div>
+					<div class="Rtable-cell-70  Rtable-cell--highlight">
+						<input type="text" id="PurchasedPayment" class="form-control input-sm" value.bind="currentItem.PurchasedPayment">
+					</div> -->
+
+					<div class="Rtable-cell-30 Rtable-cell--highlight">
+						<strong> Payment No</strong>
+					</div>
+					<div class="Rtable-cell-70  Rtable-cell--highlight">
+						<input type="text" id="PurchasedPaymentNo" class="form-control input-sm" value.bind="currentItem.PurchasedPaymentNo">
+					</div>
+
+					<div class="Rtable-cell-30 Rtable-cell--highlight">
+						<strong> Note</strong>
+					</div>
+					<div class="Rtable-cell-70  Rtable-cell--highlight">
+						<textarea id="PurchasedNotes" cols="66" rows="3" class="form-control input-sm" wrap value.bind="currentItem.PurchasedNotes">	</textarea>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</template>
+
+<!-- style="width:50%" <div id="top-left" class="data-form overflow-y-auto flex-column-2"> -->
+
+
+<!-- <div class="Rtable-cell--highlight">
+				<h3> Purchased</h3>
+			</div> -->
+<!-- <input type="text" id="PurchasedNotes" class="form-control input-sm" value.bind="currentItem.PurchasedNotes"> -->
+
+<!-- <select id="OwnerID" class="form-control" value.bind='currentItem.PurchasedFrom'> 
+                      <option model.bind="null">Choose...</option> 
+                       <option repeat.for="opt of appService.orgsList" model.bind="opt._id">
+                        ${opt.OrgName} 
+                      </option> 
+                    </select> -->
+<!-- <input dblclick.delegate="showModal('PurchasedFrom')" type="text" 
+                    id="PurchasedFrom"
+                     class="form-control input-sm" value.bind="currentItem.purchasedfromname"> -->
