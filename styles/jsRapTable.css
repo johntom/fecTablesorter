@@ -19,7 +19,8 @@
 	text-align:left;
 	position:sticky;
     top:0px;
-	z-index:10;
+	/* z-index:10; */
+  	z-index:1;
 	white-space: nowrap;
 	-webkit-user-select: none;
 	-moz-user-select: none;

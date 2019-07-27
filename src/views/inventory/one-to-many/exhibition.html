@@ -15,72 +15,76 @@
 		</h4>
 		<!-- <th width="70px" class="header">ID </th> -->
 
-		<table id="dtVerticalScrollExample" class="table  table-bordered table-sm" cellspacing="0"
+		<!-- <table id="dtVerticalScrollExample" class="table  table-bordered table-sm" cellspacing="0"
   width="100%">
 			<thead class="table-header-blue" data-sort="items.bind: currentItem.exhibition; cols: ['WorkDate','Notes']">
-		
-		<!-- <table id="table" class="tablesorter">
-			<thead> -->
-				<tr>
-					<th>ID </th>
-					<th>Title </th>
-					<th>Sponsor </th>
-					<th>Location </th>
-					<th>Dates </th>
-					<th>Sort Date </th>
-					<th>Traveled </th>
+		 -->
+		<!-- <table id="raptable" > -->
+		<!-- <div id="raptable" style="width:600px"> -->
+		<!-- <table id="raptable" style="width:600px"> -->
+		<div id="raptable">
+			<table>
+				<thead>
+					<tr>
+						<th>ID </th>
+						<th>Title </th>
+						<th>Sponsor </th>
+						<th>Location </th>
+						<th>Dates </th>
+						<th>Sort Date </th>
+						<th>Traveled </th>
 
-					<th>Batch No </th>
+						<th>Batch No </th>
 
 
-					<th>Note </th>
-					<th>Cmd</th>
+						<th>Note </th>
+						<th>Cmd</th>
 
-				</tr>
-			</thead>
+					</tr>
+				</thead>
 
-			<tbody>
-				<tr repeat.for="exhibition of currentItem.exhibition" with.bind="exhibition">
-					<!-- <td> ${ExhibitTitle} </td> -->
-					<td><input type="text" id="id" class="form-control  input-sm" value.bind="exhibition.id"></td>
+				<tbody>
+					<tr repeat.for="exhibition of currentItem.exhibition" with.bind="exhibition">
+						<!-- <td> ${ExhibitTitle} </td> -->
+						<td><input type="text" id="id" class="form-control  input-sm" value.bind="exhibition.id"></td>
 
-					<td><input type="text" id="ExhibitTitle" class="form-control  input-sm" value.bind="exhibition.ExhibitTitle"></td>
-					<td><input type="text" id="ExhibitSponser" class="form-control  input-sm" value.bind="exhibition.ExhibitSponser"></td>
+						<td><input type="text" id="ExhibitTitle" class="form-control  input-sm" value.bind="exhibition.ExhibitTitle"></td>
+						<td><input type="text" id="ExhibitSponser" class="form-control  input-sm" value.bind="exhibition.ExhibitSponser"></td>
 
-					<td>
-						<select id="ExhibitLocation" class="form-control input-sm" value.bind="ExhibitLocation"> 
+						<td>
+							<select id="ExhibitLocation" class="form-control input-sm" value.bind="ExhibitLocation"> 
                       <option model.bind="null">Choose...</option> 
                      <option repeat.for="opt of appService.codesProvenanceLocation" model.bind="opt.id">
                        <!-- codesProvenanceLocation -->
                            ${opt.Description} 
                       </option> 
                     </select>
-					</td>
+						</td>
 
-					<td><input type="text" id="ExhibitDates" class="form-control  input-sm" value.bind="exhibition.ExhibitDates "></td>
-					<td><input type="date" id="ExhibitSortDate" class="form-control  input-sm" value.bind="exhibition.ExhibitSortDate | dateFormat"></td>
+						<td><input type="text" id="ExhibitDates" class="form-control  input-sm" value.bind="exhibition.ExhibitDates "></td>
+						<td><input type="date" id="ExhibitSortDate" class="form-control  input-sm" value.bind="exhibition.ExhibitSortDate | dateFormat"></td>
 
 
-					<td>
-						<!-- <input type="text" id="Traveled" class="form-control  input-sm" value.bind="exhibition.Traveled"> -->
-						<input type="checkbox" id="Traveled" checked.bind="exhibition.Traveled">
+						<td>
+							<!-- <input type="text" id="Traveled" class="form-control  input-sm" value.bind="exhibition.Traveled"> -->
+							<input type="checkbox" id="Traveled" checked.bind="exhibition.Traveled">
 
-					</td>
-					<td><span> ${batchno}</span></td>
+						</td>
+						<td><span> ${batchno}</span></td>
 
-					<td><input type="text" id="ExhibitMemo" class="form-control  input-sm" value.bind="exhibition.ExhibitMemo"></td>
-					<td>
-						<!-- <button class="btn btn-primary" click.delegate="exhibition.edit=!exhibition.edit">${ !exhibition.edit ? 'Update' : 'Done' }</button> -->
-						<button class="btn btn-primary" click.delegate="saveitem(exhibition,$index)">${ !exhibition.edit ? 'Edit' : 'Save' }</button>
-						<button class="btn btn-sm btn-danger" click.delegate="remove(exhibition,$index)">           Delete            </button>
-						<button class="btn btn-success" click.delegate="modal(exhibition,$index)">Pop</button> _______________________
+						<td><input type="text" id="ExhibitMemo" class="form-control  input-sm" value.bind="exhibition.ExhibitMemo"></td>
+						<td>
+							<!-- <button class="btn btn-primary" click.delegate="exhibition.edit=!exhibition.edit">${ !exhibition.edit ? 'Update' : 'Done' }</button> -->
+							<button class="btn btn-primary" click.delegate="saveitem(exhibition,$index)">${ !exhibition.edit ? 'Edit' : 'Save' }</button>
+							<button class="btn btn-sm btn-danger" click.delegate="remove(exhibition,$index)">           Delete            </button>
+							<button class="btn btn-success" click.delegate="modal(exhibition,$index)">Pop</button>
 
-					</td>
+						</td>
 
-				</tr>
-			</tbody>
-		</table>
-
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 	</section>
 </template>
