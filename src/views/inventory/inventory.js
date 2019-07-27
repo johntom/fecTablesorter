@@ -183,7 +183,7 @@ export class Inventory{
   attached() {
     $(document).ready(function () {
       // $('table').tablesorter({
-      $('myTable').tablesorter({
+      $('table').tablesorter({
         
         theme: 'default',
         //   headerTemplate : '{content} {icon}',
@@ -215,10 +215,10 @@ export class Inventory{
 
 
 
-        initialized: function (myTable) {
+        initialized: function (table) {
           // Not an ideal solution to fix column alignment,
           // but it works (for now)
-          $(myTable).resize();
+          $(table).resize();
         }
       });
 
