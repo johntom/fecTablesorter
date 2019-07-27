@@ -27,9 +27,12 @@ bottom: .5em;
 			</a>
 		</h4> 
 
-<table id="dtVerticalScrollExample" class="table  table-bordered table-sm" cellspacing="0"
+<!-- <table id="dtVerticalScrollExample" class="table  table-bordered table-sm" cellspacing="0"
   width="100%">
-  <thead>
+  <thead> -->
+    <div id="raptable">
+	<table>
+		<thead>
     <tr>
 					 <th>Author</th>
 					 <th>First</th>
@@ -135,7 +138,7 @@ bottom: .5em;
 						<button class="btn btn-primary" click.delegate="saveitem(reproduction,$index)">${!reproduction.edit ? 'Edit' : 'Save' }</button>
 						<button class="btn btn-danger" click.delegate="remove(reproduction,$index)">Del</button>
 						<button class="btn btn-success" click.delegate="modal(reproduction,$index)">Pop</button>
-					  _______________________ 
+					
           </td> 
 				</tr>
 			</tbody>
@@ -161,5 +164,6 @@ bottom: .5em;
 			
       </tfoot>
 		</table>
+    </div>		
 	</section>
 </template>

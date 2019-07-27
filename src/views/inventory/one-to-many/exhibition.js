@@ -114,11 +114,7 @@ export class Exhibition {
 
 
    attached() {
-
-  
-
     $(document).ready(function () {
-
       $('#raptable').jsRapTable({
         onSort: function (i, d) {
           $('tbody').find('td').filter(function () {
