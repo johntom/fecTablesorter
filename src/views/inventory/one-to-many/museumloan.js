@@ -10,7 +10,8 @@ import { DialogService } from 'aurelia-dialog';
 
 import { Promptyn } from '../../../services/promptyn';
 import { Promptorg } from '../promptorg';
-
+import jsRapTable from '../../../../jslib/jsRapTable';
+ 
 // @inject(TaskQueue, BindingSignaler, ApiService, ApplicationService, DialogService)
 @inject(ApiService, ApplicationService, DialogService)
 

@@ -5,7 +5,8 @@ import { DialogService } from 'aurelia-dialog';
 import { Prompt } from '../../../services/prompt';
 import { PromptForm } from '../promptForm';
 import { Promptrepro } from '../../prompt/promptRepro';
-
+import jsRapTable from '../../../../jslib/jsRapTable';
+ 
 @inject(ApiService, ApplicationService, DialogService)
 export class Reproduction {
   heading = 'DataForm HEADER...';

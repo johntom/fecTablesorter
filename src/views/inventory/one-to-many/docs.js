@@ -4,6 +4,8 @@ import { ApplicationService } from '../../../services/application-service';
 
 import {DialogService} from 'aurelia-dialog';
 import {Prompt} from '../../../services/prompt';
+import jsRapTable from '../../../../jslib/jsRapTable';
+ 
 @inject(ApiService, ApplicationService,DialogService)
 export class Docs {
   heading = 'DataForm HEADER...';

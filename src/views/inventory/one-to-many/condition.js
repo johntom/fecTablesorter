@@ -5,6 +5,8 @@ import { ApplicationService } from '../../../services/application-service';
 import { DialogService } from 'aurelia-dialog';
 import { Prompt } from '../../../services/prompt';
 import { Promptyn } from '../../../services/promptyn';
+import jsRapTable from '../../../../jslib/jsRapTable';
+ 
 @inject(ApiService, ApplicationService, DialogService)
 export class Condition {
   heading = 'DataForm HEADER...';

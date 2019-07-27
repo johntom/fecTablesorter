@@ -7,6 +7,8 @@ import { DialogService } from 'aurelia-dialog';
 import { Promptyn } from '../../../services/promptyn';
 
  import { Promptorg } from '../promptorg';
+ import jsRapTable from '../../../../jslib/jsRapTable';
+ 
 // import { Prompt } from '../../../services/prompt';
 @inject(ApiService, ApplicationService, DialogService)
 export class Conssignedto {

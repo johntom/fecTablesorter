@@ -8,6 +8,8 @@ import { DialogService } from 'aurelia-dialog';
 
 import { Promptyn } from '../../../services/promptyn';
 import { Promptorg } from '../promptorg';
+import jsRapTable from '../../../../jslib/jsRapTable';
+ 
 @inject(ApiService, ApplicationService, DialogService)
 export class Conservation {
   heading = 'DataForm HEADER...';
