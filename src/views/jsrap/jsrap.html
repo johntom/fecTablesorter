@@ -1,26 +1,12 @@
 	<template>
 	<!-- <require from="./docs.css"></require> -->
 	<style>
-		.tableFixHead {
-			overflow-y: auto;
-			height: 300px;
-		}
-
-		.tableFixHead table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-
-		.tableFixHead th,
-		.tableFixHead td {
-			padding: 8px 16px;
-		}
-
-		.tableFixHead th {
-			position: sticky;
-			top: 0;
-			background: #eee;
-		}
+.rapTable table{
+	background-color:#fff;
+	border-spacing:0px;
+	width:100%;
+	table-layout:fixed;
+}
 	</style>
  	<require from="../../resources/value-converters/date-format"></require>
 
@@ -34,7 +20,7 @@
 		</h4>
    
   
-  <div id="demo1">
+  <div id="demo1" style="width:600px">
 			<table>
 				<thead>
 

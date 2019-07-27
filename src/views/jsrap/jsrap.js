@@ -6,7 +6,7 @@ import { ApiService } from '../../utils/servicesApi';
 import { ApplicationService } from '../../services/application-service';
 import moment from 'moment';
 
-// import jsRapTable from '../../../jslib/jsRapTable';
+import jsRapTable from '../../../jslib/jsRapTable';
 
 
 @inject(ApiService, ApplicationService)
