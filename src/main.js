@@ -15,7 +15,7 @@ export async function configure(aurelia) {
     .standardConfiguration()
     .developmentLogging()
     // .plugin('aurelia-kendoui-bridge')
-      // .plugin('aurelia-kendoui-bridge', (kendo) => kendo.detect().notifyBindingBehavior())
+     .plugin('aurelia-kendoui-bridge', (kendo) => kendo.detect().notifyBindingBehavior())
 
 
     .plugin('aurelia-dialog', config => {
