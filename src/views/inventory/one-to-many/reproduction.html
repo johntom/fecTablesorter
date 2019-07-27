@@ -57,18 +57,18 @@ bottom: .5em;
         
 				<tr repeat.for="reproduction of currentItem.reproduction " with.bind="reproduction">
 					<td >
-						<span show.bind="!reproduction.edit">${ReproductionAuthor}</span>
-						<input show.bind="reproduction.edit" id="zReproductionAuthor" class="form-control input-sm" disabled.bind="!reproduction.edit"
+						<!-- <span show.bind="!reproduction.edit">${ReproductionAuthor}</span> -->
+						<input class="form-control input-sm" disabled.bind="!reproduction.edit"
 						 type="text" value.bind="ReproductionAuthor">
 					</td>
 						<td >
-						<span show.bind="!reproduction.edit">${AuthorFirst}</span>
-						<input show.bind="reproduction.edit" id="zReproductionTitle2" class="form-control input-sm" disabled.bind="!reproduction.edit"
+						<!-- <span show.bind="!reproduction.edit">${AuthorFirst}</span> -->
+						<input  class="form-control input-sm" disabled.bind="!reproduction.edit"
 						 type="text" value.bind="AuthorFirst">
 					</td>
 						<td >
-						<span show.bind="!reproduction.edit">${AuthorLast}</span>
-						<input show.bind="reproduction.edit" id="zReproductionTitle3" class="form-control input-sm" disabled.bind="!reproduction.edit"
+						<!-- <span show.bind="!reproduction.edit">${AuthorLast}</span> -->
+						<input  class="form-control input-sm" disabled.bind="!reproduction.edit"
 						 type="text" value.bind="AuthorLast">
 					</td>
 
@@ -77,13 +77,13 @@ bottom: .5em;
 					</td>
 
 					<td >
-						<span show.bind="!reproduction.edit">${ReproductionTitle}</span>
-						<input show.bind="reproduction.edit" id="zReproductionTitle" class="form-control input-sm" disabled.bind="!reproduction.edit"
+						<!-- <span show.bind="!reproduction.edit">${ReproductionTitle}</span> -->
+						<input class="form-control input-sm" disabled.bind="!reproduction.edit"
 						 type="text" value.bind="ReproductionTitle">
 					</td>
 						<td >
-						<span show.bind="!reproduction.edit">${ReproductionName}</span>
-						<input show.bind="reproduction.edit" id="zReproductionAuthor" class="form-control input-sm" disabled.bind="!reproduction.edit"
+						<!-- <span show.bind="!reproduction.edit">${ReproductionName}</span> -->
+						<input class="form-control input-sm" disabled.bind="!reproduction.edit"
 						 type="text" value.bind="ReproductionName">
 					</td>
 						<td >
