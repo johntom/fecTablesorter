@@ -28,7 +28,7 @@ export class App {
         
 
     { "route": 'home', name: 'home', moduleId: PLATFORM.moduleName('./views/home/home'), nav: true, title: 'Home' },
-  { "route": 'tsort', name: 'tsort', "moduleId": PLATFORM.moduleName('./views/tsort/tsort'), nav: true, title: 'Inventory' },
+  { "route": 'tsort', name: 'tsort', "moduleId": PLATFORM.moduleName('./views/tsort/tsort'), nav: true, title: 'Tablesort' },
  
    //      { "route": 'tsort', name: 'tsort', "moduleId": PLATFORM.moduleName('./views/tsort/tsort'), nav: true, title: 'tsort' },
      
