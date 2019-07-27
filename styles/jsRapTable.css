@@ -13,7 +13,7 @@
 }
 /* 	background-image:linear-gradient(#282,#020); */
 .rapTable table thead tr th{
-	background-image:linear-gradient(lightblue,blue);
+	background-image:linear-gradient(lightblue,lightblue);
 	color:#fff;
 	padding:4px;
 	cursor:pointer;
@@ -65,7 +65,7 @@
 .rapTable .darr,
 .rapTable .uarr{
 	/* background-image:linear-gradient(#4b4,#262); */
-  	background-image:linear-gradient(  lightblue,blue);
+  	background-image:linear-gradient(  lightblue,lightblue);
 
 }
 .rapTable .darr span:before{
