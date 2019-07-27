@@ -23,13 +23,13 @@ export class App {
     config.title = 'MRG Layout';
     config.addPipelineStep('authorize', AuthorizeStep);
     config.map([
-     
+
  { "route": '', redirect: 'home' },
-       
+        
 
     { "route": 'home', name: 'home', moduleId: PLATFORM.moduleName('./views/home/home'), nav: true, title: 'Home' },
   { "route": 'tsort', name: 'tsort', "moduleId": PLATFORM.moduleName('./views/tsort/tsort'), nav: true, title: 'Inventory' },
-   
+ 
    //      { "route": 'tsort', name: 'tsort', "moduleId": PLATFORM.moduleName('./views/tsort/tsort'), nav: true, title: 'tsort' },
      
   //      { "route": 'inventory', name: 'inventory', "moduleId": PLATFORM.moduleName('./views/inventory/inventory'), nav: true, title: 'Inventory' },
