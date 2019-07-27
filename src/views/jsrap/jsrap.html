@@ -1,0 +1,315 @@
+	<template>
+	<!-- <require from="./docs.css"></require> -->
+	<style>
+		.tableFixHead {
+			overflow-y: auto;
+			height: 300px;
+		}
+
+		.tableFixHead table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		.tableFixHead th,
+		.tableFixHead td {
+			padding: 8px 16px;
+		}
+
+		.tableFixHead th {
+			position: sticky;
+			top: 0;
+			background: #eee;
+		}
+	</style>
+ 	<require from="../../../resources/value-converters/date-format"></require>
+
+	<!-- <section class="customer-orders au-animate"> -->
+	<section class="docs full-height flex-column-1 overflow-y-auto ignore">
+		<h4>
+			<i class="fa fa-folder-open"></i> Notes (${currentItem.notes.length})
+			<a slot="buttons-slot" class="btn btn-success" click.delegate="addNote()">
+				<i class="fa fa-plus"></i> Add Note
+			</a>
+		</h4>
+   
+  
+  <div id="demo1">
+			<table>
+				<thead>
+
+					<tr>
+						<th>AAA</th>
+						<th>BBB</th>
+						<th>CCC</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>52</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+	<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>52</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>Smith</td>
+
+						<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+					</tr>
+					<tr>
+						<td>94</td>
+						<td>Jackson</td>
+
+						<td>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+    <div id="demo2" style="width:400px">
+				<table>
+					<thead>
+						<tr>
+							<tr>
+								<th>Work Date
+								</th>
+							 <th>Note
+								</th>
+								<th>Cmd
+								</th>
+							</tr>
+					</thead>
+
+					<tbody>
+						<tr repeat.for="note of currentItem.notes" with.bind="note">
+						<td width="125px">
+								<span show.bind="!note.edit">${WorkDate | dateFormat}</span>
+								<input show.bind="note.edit" class="form-control input-sm" disabled.bind="!note.edit" type="date" value.bind="WorkDate | dateFormat">
+							</td>
+							<td width="325px">
+								<span show.bind="!note.edit">${Notes}</span>
+								<input show.bind="note.edit" class="form-control input-sm" disabled.bind="!note.edit" type="text" value.bind="Notes">								</td>
+							
+            
+            
+            	<td width="225px">
+								<button class="btn btn-primary" click.delegate="saveitem(note,$index)">${ !note.edit ? 'Edit' : 'Save' }</button>
+								<button class="btn btn-danger" click.delegate="remove(note,$index)">Delete</button>
+							</td>
+					</tbody>
+				</table>
+			
+		</div> 
+
+
+
+    	</section>
+</template>
