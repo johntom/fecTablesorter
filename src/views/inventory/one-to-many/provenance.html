@@ -4,7 +4,7 @@
 
 
 	<section class="docs full-height flex-column-1 overflow-y-auto ignore" style="height:400px">
-		<table id="dtVerticalScrollExample" class="table  table-bordered table-sm" cellspacing="0" <h4>
+<h4>
 			<i class="fa fa-folder-open"></i> Provenance
 			<a slot="buttons-slot" class="btn btn-primary" click.delegate="addDetail()">
 				<i class="fa fa-plus"></i> Add Provenance
@@ -70,9 +70,9 @@
 								<input show.bind="provenance.edit" disabled.bind="!provenance.edit" type="date" id="ProvDate" class="form-control" value.bind="ProvDate">
 							</td>
 							<td>
-								<span show.bind="!provenance.edit">${ProvMemo }</span>
-
-								<input show.bind="provenance.edit" disabled.bind="!provenance.edit" type="text" id="ProvMemo" class="form-control " value.bind="ProvMemo">
+								<!-- <span show.bind="!provenance.edit">${ProvMemo }</span> -->
+<!-- show.bind="provenance.edit" disabled.bind="!provenance.edit" -->
+								<input  type="text" id="ProvMemo" class="form-control " value.bind="ProvMemo">
 
 							</td>
 
