@@ -64,9 +64,12 @@ export class Adjustermotes {
 
       $('#demo1').jsRapTable({
         onSort: function (i, d) {
+           console.log(i,'i-d',d)
           $('tbody').find('td').filter(function () {
             return $(this).index() === i;
+               console.log('$(this)',$(this))
           }).sortElements(function (a, b) {
+              console.log(a,$.text([a]),'=a-b=',b,$.text([b]) ) 
             if (i)
               return $.text([a]).localeCompare($.text([b])) * (d ? -1 : 1);
             else
