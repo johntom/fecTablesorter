@@ -65,9 +65,28 @@ export class SearchResults {
         id: "id", // Must assign id for update to work
         fields: {
           // LegacyID: { type: "number" }, // scan template
-          Artist: { type: "string" }, 
-            artist: { type: "string" }, // barcode insured
-       
+          Artist: { type: "string" },
+          artist: [
+            {
+              "ArtistName": { type: "string" },
+              "yearofBirth": { type: "string" }
+            }],
+          MediumSupportobj: { "Description": { type: "string" } },
+          "currentocationname": { type: "string" },
+          "ownedbyname": { type: "string" },// ownerstatus
+          SoldDate: { type: "date" },
+          "Sold": { type: "string" },
+          "soldtoname": { type: "string" },
+          UnframedHeight: { type: "number" },
+          UnframedHeight16: { type: "string" },
+          UnframedWidth: { type: "number" },
+          UnframedWidth16: { type: "string" },
+          UnframedDepth: { type: "number" },
+          UnframedDepth16: { type: "string" },
+
+
+         
+          // Purchased From -->
           //  ArtistRegistra: { type: "string" },
           InventoryCode: { type: "string" },
           Title: { type: "string" },
@@ -76,14 +95,14 @@ export class SearchResults {
           Bin: { type: "string", sortable: false, menu: false }, // barcode insured
           Owner: { type: "string" },
           InvYear: { type: "string" },
-          UnframedHeight: { type: "string" },
+
           // Image : { type: "string", editable: false },
         }
       }
     },
     // pageSize: 10,
     height: 400,
-  
+
     //  serverPaging: true,
     //   serverSorting: true,
     sort: { field: 'InventoryCode', dir: 'asc' },
@@ -255,7 +274,7 @@ export class SearchResults {
     // return inv
 
 
-    return this.api.findInventory(this.queryParams) 
+    return this.api.findInventory(this.queryParams)
       //return this.api.findInventoryKeywords(this.queryParams)
 
       .then((jsonRes) => {
@@ -433,13 +452,13 @@ export class SearchResults {
   // }
 
 
- async addexistingSelection() {
-if(this.appService.currentsavedlist===""){
-    this.dialogService.open({ viewModel: Promptmess, model: `please select a saved list  `, lock: true }).whenClosed(async response => { });
-}
+  async addexistingSelection() {
+    if (this.appService.currentsavedlist === "") {
+      this.dialogService.open({ viewModel: Promptmess, model: `please select a saved list  `, lock: true }).whenClosed(async response => { });
+    }
 
     let sels
-    let newcount=0
+    let newcount = 0
     if (this.selectedids === undefined) {
       sels = []
     } else sels = this.selectedids
@@ -447,12 +466,12 @@ if(this.appService.currentsavedlist===""){
     var grid = this.grid;
     var selectedRows = grid.select();
     if (selectedRows.length === 0) {
-     
-            this.dialogService.open({ viewModel: Promptmess, model: `please select a row to add  `, lock: true }).whenClosed(async response => { });
-         
+
+      this.dialogService.open({ viewModel: Promptmess, model: `please select a row to add  `, lock: true }).whenClosed(async response => { });
 
 
-      
+
+
     } else {
       var maxRows = selectedRows.length / 2;
       selectedRows.each(function (idx, el) {
@@ -470,18 +489,18 @@ if(this.appService.currentsavedlist===""){
         }
         if (i === maxRows - 1) {
           this.selectedids = sels;
-         await  this.api.updateSavedlists(this.appService.currentsavedlist, this.selectedids).then((jsonRes) => { 
-            console.log('jsonRes ', jsonRes); 
+          await this.api.updateSavedlists(this.appService.currentsavedlist, this.selectedids).then((jsonRes) => {
+            console.log('jsonRes ', jsonRes);
           });
         }
       }
 
     }
 
-     
-    let response = await this.api.findInventorySavedLists( this.appService.currentsavedlist);
+
+    let response = await this.api.findInventorySavedLists(this.appService.currentsavedlist);
     this.sllen = response.data.length
-    console.log('this.repos ', this.api.currentsavedlist) 
+    console.log('this.repos ', this.api.currentsavedlist)
     this.message = ` ${newcount} items added to list ${this.appService.currentsavedlist} count:${this.sllen}`
   }
   showSelection() {
